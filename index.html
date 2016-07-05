@@ -7,7 +7,7 @@
         <!-- CUSTOMIZE METADATA HERE -->
 		<title>Presentation</title>
 		<meta name="description" content="An html slideshow">
-		<meta name="author" content="Michael J. Harms">
+		<meta name="author" content="Zachary R. Sailer">
 
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -17,10 +17,11 @@
 
 
 		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<link rel="stylesheet" href="reveal/css/theme/white.css" id="theme">
+		<link rel="stylesheet" href="reveal/css/theme/black.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.terminal/0.10.12/jquery.terminal.min.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -45,57 +46,272 @@
 			<!-- Any section element inside of this container is a slide -->
 			<div class="slides">
 
-                <section>
-                    <h4>Bootstrap-based slide layout</h4>
-                    <div class="row" align="middle">
-                        <div class="col-xs-6">
-                            <p>Column 1</p>
-                        </div>
-                        <div class="col-xs-6">
-                            <p>Column 2</p>
-                        </div>
-                    </div>
-                    <h4>A list that builds</h4>
-                    <ul>
-                        <li class="fragment">Item #1</li>
-                        <li class="fragment">Item #2</li>
-                    </ul>
-                    <h4>Math!</h4>
-                    <div class="row">
-                        When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are $$x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}.$$
-                    </div>
 
-                </section>
+<!--
+######################################################
+Introduction slides
+######################################################
+-->
 
-                <section>
-                    <h4>Image embed</h4>
-                    <div class="row" align="middle">
-                        <img class="img-responsive" height="50%" width="50%" data-src="presentation-data/img/test-image.png" />
-                    </div>
-                </section>
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h1>Collaborating on Code</h1>
+<img data-src="presentation-data/img/git-logo.png" style="height:300px;">
+<text style="font-size:300px;">+</text>
+<img data-src="presentation-data/img/github-logo.png" style="height:300px;">
+<h5>Zach Sailer</h5>
+</section>
 
-                <section>
-                    <h4>Video embed</h4>
-                    <div class="row" align="middle">
-                        <video data-autoplay mute controls height="60%" width="60%">
-                            <source data-src="presentation-data/video/test-video.mp4" />
-                        </video>
-                    </div>
-                </section>
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h1>How do we learn to code?</h1>
+<h3 class="fragment" style="color:green;">by writing bad code...</h3>
+<h3 class="fragment" style="color:green;">having it fail us...</h3>
+<h3 class="fragment" style="color:green;">headache...</h3>
+<h3 class="fragment" style="color:green;">learn and improve...</h3>
+</section>
 
-                <section>
-                    <h4>D3 embed</h4>
-                    <button align="middle" onclick="transition()">Update</button>
-                    <div id="d3embed"></div>
-                </section>
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h1>How do we learn to code?</h1>
+<h3 class="fragment" style="color:green;">working with others...</h3>
+<h3 class="fragment" style="color:green;">see from their ideas and mistakes...</h3>
+<h3 class="fragment" style="color:green;">learning and improve...</h3>
+</section>
+
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h1>What do we need?<h1>
+<h2 class="fragment" style="color:green;">Version Control</h2>
+<h2 class="fragment" style="color:green;">Collaborative Platform</h2>
+</section>
+
+
+<!--
+######################################################
+Version Control
+######################################################
+-->
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h1>What is version control?<h1>
+</section>
+
+
+<!--
+######################################################
+Slides about Git
+######################################################
+-->
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h1>Meet Git</h2>
+<img class="fragment" data-src="presentation-data/img/git-xkcd.png">
+</section>
+
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h1>Git Vocabulary</h2>
+<ul>
+<li class="fragment"><h4>Repository</h4>a project folder tracked by git.</li>
+<li class="fragment"><h4>Branch</h4>a separate line of the repository with own tracking/history.</li>
+<li class="fragment"><h4>Commit</h4>save the state of the current line of development for a repository.</li>
+<li class="fragment"><h4>Merge</h4>combine two lines of development within a repository.</li>
+</ul>
+</section>
+
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h1>Example of Repository</h1>
+<p>Think of this as a folder in your filesystem</p>
+<img style="height:300px;" data-src="presentation-data/img/green-step.png">
+</section>
+
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Example of Repository</h2>
+<h3>Initialize the repo</h3>
+<div class="fragment">
+<pre><code class="bash" data-trim data-noescape>
+user@machine:$ mkdir myproject
+user@machine:$ cd myproject
+user@machine:myproject$ git init
+
+
+Initialized empty Git repository in myproject/.git/
+
+user@machine:myproject$ ls -a
+
+.  ..  .git
+</code></pre>
+</div>
+</section>
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Example of Repository</h2>
+<h3>Add a file to your repo</h3>
+<div class="fragment">
+<pre><code class="bash" data-trim data-noescape>
+user@machine:myproject$ "Git/Github tutorial from UO Bioinformatics program" > README.md
+user@machine:myproject$ git status
+
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	README.md
+nothing added to commit but untracked files present (use "git add" to track)
+
+</code></pre>
+</div>
+</section>
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Example of Repository</h2>
+<h3>Add a file to your repo</h3>
+<div class="fragment">
+<pre><code class="bash" data-trim data-noescape>
+user@machine:myproject$ git add README.md
+user@machine:myproject$ git status
+
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	new file:   README.md
+#
+
+</code></pre>
+</div>
+</section>
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h1>Example of Commit</h1>
+<h3>Changes that are tracked.</h3>
+<img style="height:300px;" data-src="presentation-data/img/yellow-step.png">
+</section>
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Example of Commit</h2>
+<div class="fragment">
+<pre><code class="bash" data-trim data-noescape>
+user@machine:myproject$ git commit
+</code></pre>
+</div>
+
+<div class="fragment">
+<pre><code class="nohighlight" data-trim data-noescape>
+1 Adding readme to project.
+2 # Please enter the commit message for your changes. Lines starting
+3 # with '#' will be ignored, and an empty message aborts the commit.
+4 # On branch master
+5 #
+6 # Initial commit
+7 #
+8 # Changes to be committed:
+9 #   (use "git rm --cached <file>..." to unstage)
+10 #
+11 #   new file:   README.md
+12 #
+</code></pre>
+<div>
+</section>
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Boom! Achievement unlocked!</h2>
+<h3>Local git repository</h3>
+<img style="height:300px;" data-src="presentation-data/img/red-step.png">
+<div class="fragment">
+<pre><code class="git" data-trim data-noescape>
+user@machine:myproject$ git log
+
+commit 0000000somecommitnumber00000000000000
+Author: Zsailer <user@gmail.com>
+Date:   Thu Jul 7 10:41:05 2016 -0700
+
+    Adding readme to project
+</code></pre>
+</div>
+</section>
+
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>local git workflow</h2>
+<img class="fragment" style="height:500px;" data-src="presentation-data/img/git-workflow-local.png">
+</section>
+
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h1>Example of Branch</h1>
+<div class="fragment">
+<pre><code class="git" data-trim data-noescape>
+user@machine:myproject$ git log
+
+commit 0000000somecommitnumber00000000000000
+Author: Zsailer <user@gmail.com>
+Date:   Thu Jul 7 10:41:05 2016 -0700
+
+    Adding readme to project
+</code></pre>
+</div>
+</section>
+
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+	<h1>Example of Merge</h1>
+</section>
+
+
+<section data-background-image="presentation-data/img/git-background.jpg">
+	<h1>You that you're acquainted with git.</h1>
+</section>
+
+<!--
+######################################################
+Remote repositories
+######################################################
+-->
+
+
+
+<!--
+######################################################
+Transition to Github
+######################################################
+-->
+<section data-background-image="presentation-data/img/github-background.jpg">
+<h1>now meet Github</h1>
+</section>
+
+<section data-background-image="presentation-data/img/github-background.jpg">
+<h2>What is Github?</h2>
+<p class="fragment">Public facing, remote host for Git version-controlled projects.</p>
+<p class="fragment">Home for collaborative discussion, hosting webpages, and </p>
+</section>
+
+
+
+
+<section>
+<h2>Let's create a Github account</h2>
+
+</section>
+
+
+<!--
+######################################################
+Project Example
+######################################################
+-->
 
 				<section>
-					<h4>Protein Viewer</h4>
-					<div id=viewer></div>
+					<div id="term_demo" style="width:1000px;"></div>
 				</section>
 
-			</div>
 
+			</div>
 		</div>
 
         <!-- Reveal.js Configurations (See their docs)-->
@@ -135,10 +351,6 @@
                     { src: 'presentation-data/lib/jquery-1.11.2.min.js' } ,
                     { src: 'presentation-data/lib/bootstrap.min.js' } ,
                     { src: 'presentation-data/lib/d3.min.js' },
-                    { src: 'presentation-data/js/test-stream.js'},
-					{ src: 'presentation-data/lib/bio-pv.min.js'},
-					{ src: 'presentation-data/js/pv-example.js'}
-
 				]
 			});
 
