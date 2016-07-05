@@ -340,7 +340,17 @@ Remote repositories
 ######################################################
 -->
 
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h1>from local repo to a remote repo</h1>
+</section>
 
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h1>Remote Repository</h1>
+<ul>
+	<li class="fragment">A mirror of a local repository hosted on a remote server</li>
+	<li class="fragment">Allows for many developers working on one repository.</li>
+</ul>
+</section>
 
 <!--
 ######################################################
@@ -348,41 +358,119 @@ Transition to Github
 ######################################################
 -->
 <section data-background-image="presentation-data/img/github-background.jpg">
-<h1>now meet Github</h1>
+<h2>Let me introduce you to <a href="https://github.com/explore">Github</a></h2>
 </section>
 
 <section data-background-image="presentation-data/img/github-background.jpg">
 <h2>What is Github?</h2>
-<p class="fragment">Public facing, remote host for Git version-controlled projects.</p>
-<p class="fragment">Home for collaborative discussion, hosting webpages, and </p>
+<p class="fragment">Remote host for Git projects.</p>
+<p class="fragment">A home for software collaboration.</p>
 </section>
 
 
-
-
-<section>
-<h2>Let's create a Github account</h2>
-
+<section data-background-image="presentation-data/img/github-background.jpg">
+<h2>Let's create a <a href="https://github.com/join">Github account</a></h2>
+<p>Pick a professional username.</p>
 </section>
 
 
-
-
-
-<section data-background-image="presentation-data/img/git-background.jpg">
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h3>The basics of a Github profile</h3>
+<img data-src="presentation-data/img/github-profile.png">
 </section>
 
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h3>Create a new repository</h3>
+<img data-src="presentation-data/img/github-new-repo.png">
+</section>
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h3>Create a new repository (2)</h3>
+<img data-src="presentation-data/img/github-repo-init.png">
+</section>
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h3>Create a new repository (3)</h3>
+<img data-src="presentation-data/img/github-blank-repo.png">
+</section>
+
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Point local repo to remote repo</h2>
+<p class="fragment">Add the remote repository with nickname "origin".</p>
+<pre class="fragment"><code>user@machine:myproject$ git remote add origin https://github.com/Zsailer/myproject</code></pre>
+<p class="fragment">Now let's see what happened.</p>
+<pre class="fragment"><code>user@machine:myproject$ git remote -v
+origin	https://github.com/Zsailer/myproject (fetch)
+origin	https://github.com/Zsailer/myproject (push)
+</code></pre>
+</section>
+
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Git vocabulary (2)</h2>
+<ul>
+<li class="fragment"><h4>Pull:</h4>download changes from a remote branch and merge with local branch.</li>
+<li class="fragment"><h4>Fetch:</h4>download/track changes from remote branch, but don't merge with local branch.</li>
+<li class="fragment"><h4>Push:</h4>upload changes from local branch to remote branch</li>
+<li class="fragment"><h4>Clone:</h4>create a new local repo from an existing remote repo.</li>
+</ul>
+</section>
+
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Push myproject to Github!</h2>
+<p class="fragment">i.e. push your local "master" branch to "origin".</p>
+<pre class="fragment"><code>user@machine:myproject$ git push origin master
+
+Counting objects: 11, done.
+Delta compression using up to 12 threads.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (11/11), 865 bytes, done.
+Total 11 (delta 3), reused 0 (delta 0)
+To git@github.com:Zsailer/myproject.git
+ * [new branch]      master -> master
+</code></pre>
+</section>
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h3>Create a new repository (3)</h3>
+<img data-src="presentation-data/img/github-remote-repo.png">
+</section>
+
+<!--
+######################################################
+Collaborating Example
+######################################################
+-->
+
+
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Github vocabulary</h2>
+<ul>
+<li class="fragment"><h4>Fork:</h4> start a new line of development from a remote repo (like branching).</li>
+<li class="fragment"><h4>Pull-Request</h4> merge a forked repo into another remote repo (like merging.)</li>
+</ul>
+</section>
 
 
 <!--
 ######################################################
-Project Example
+Useful Resources
 ######################################################
 -->
 
-				<section>
-					<div id="term_demo" style="width:1000px;"></div>
-				</section>
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Git vocabulary (3)</h2>
+</section>
+
+<!--
+######################################################
+END
+######################################################
+-->
 
 
 			</div>
