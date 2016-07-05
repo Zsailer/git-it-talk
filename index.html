@@ -61,6 +61,14 @@ Introduction slides
 <h5>Zach Sailer</h5>
 </section>
 
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h1>What is our goal today?</h1>
+<h3 class="fragment" style="color:green;">To successfully work on a single project with many people.</h3>
+<h3 class="fragment">a.k.a. <bold>to collaborate</bold></h3>
+</section>
+
+
 <section data-background-image="presentation-data/img/generic-background.jpg">
 <h1>How do we learn to code?</h1>
 <h3 class="fragment" style="color:green;">by writing bad code...</h3>
@@ -242,30 +250,88 @@ Date:   Thu Jul 7 10:41:05 2016 -0700
 <img class="fragment" style="height:500px;" data-src="presentation-data/img/git-workflow-local.png">
 </section>
 
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h1>Example of Branch</h1>
+<h3>Work on a new feature using a separate line of development</h3>
+<img class="fragment" style="height:300px;" data-src="presentation-data/img/branch.png">
+</section>
 
 <section data-background-image="presentation-data/img/generic-background.jpg">
 <h1>Example of Branch</h1>
+<p class="fragment">List current branches.</p>
 <div class="fragment">
 <pre><code class="git" data-trim data-noescape>
-user@machine:myproject$ git log
-
-commit 0000000somecommitnumber00000000000000
-Author: Zsailer <user@gmail.com>
-Date:   Thu Jul 7 10:41:05 2016 -0700
-
-    Adding readme to project
+user@machine:myproject$ git branch
+* master
+</code></pre>
+</div>
+<p class="fragment">Create a branch named <code>feature</code></p>
+<div class="fragment">
+<pre><code class="git" data-trim data-noescape>
+user@machine:myproject$ git branch feature
+user@machine:myproject$ git branch
+feature
+* master
+</code></pre>
+</div>
+<p class="fragment">Switch to that branch.</p>
+<div class="fragment">
+<pre><code class="git" data-trim data-noescape>
+user@machine:myproject$ git checkout feature
+Switched to branch 'feature'
 </code></pre>
 </div>
 </section>
 
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h3>Exercise 1: add to the your feature branch</h3>
+<ol class="fragment">
+<li>Create a new file to this branch.</li>
+<li>Add it to your git workspace</li>
+<li>Commit it to your project history.</li>
+</ol>
+<p style="color:green;" class="fragment">Hint: Repeat the same steps as we did with the master branch.</p>
+</section>
 
 <section data-background-image="presentation-data/img/generic-background.jpg">
-	<h1>Example of Merge</h1>
+<h3>Exercise 2: add a new (and different) file to your master branch</h3>
+<ol class="fragment">
+<li><code>checkout</code> your master branch.</li>
+<li>Create a new file.</li>
+<li><code>add</code> it to your git workspace</li>
+<li><code>commit</code> it to your project history.</li>
+</ol>
+<p style="color:green;" class="fragment">Note: the file you added to the feature branch is not in your repository.</p>
 </section>
 
 
-<section data-background-image="presentation-data/img/git-background.jpg">
-	<h1>You that you're acquainted with git.</h1>
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h1>Example of a Merge</h1>
+<h3>Merge two lines of development</h3>
+<img class="fragment" style="height:300px;" data-src="presentation-data/img/merge.png">
+</section>
+
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Example of a Merge</h2>
+<p class=fragment>Make sure you are on the master branch</p>
+<div class="fragment">
+<pre><code class="git" data-trim data-noescape>
+user@machine:myproject$ git branch
+feature
+* master
+</code></pre>
+</div>
+<p class="fragment">Merge feature branch into master branch.</p>
+<div class="fragment">
+<pre><code>
+user@machine:myproject$ git merge feature
+Merge made by recursive.
+ test.txt |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+ create mode 100644 test.txt
+</code></pre>
+</div>
 </section>
 
 <!--
@@ -298,6 +364,14 @@ Transition to Github
 <h2>Let's create a Github account</h2>
 
 </section>
+
+
+
+
+
+<section data-background-image="presentation-data/img/git-background.jpg">
+</section>
+
 
 
 <!--
