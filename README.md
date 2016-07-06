@@ -1,19 +1,7 @@
-# Collaborating on Code
-## Tutorial of Git and Github
-html and basic directory structure template for (relatively) easily creating reveal.js slideshows with all dependencies locally so you do not need an internet connection while presenting.
+# Collaborating on Code Talk
 
-## Basic installation:
-1. Clone the reveal-presentation-template repository
+A primer for learning Git and Github. The slides can be viewed [here](https://zsailer.github.io/git-it-talk/).
 
-    ```
-    git clone https://github.com/harmslab/reveal-presentation-template
-    ```
-2. Grab reveal as submodule:
-
-    ```
-    cd reveal-presentation-template
-    git submodule init
-    git submodule update
-    ```
-3. If you want to run on local server, follow Reveal's instructions for node and grunt [here](https://github.com/hakimel/reveal.js/)
-4. If you want mathjax locally, download the latest release (https://github.com/mathjax/MathJax/archive/master.zip) and unzip it into the reveal.js base directory.  This should create a directory called `MathJax-master`.
+The purpose of this talk is provide UO bioinformatic students with a simple
+beginner's demo to Git and Github. The talk includes how to start
+a project with Git and push it to Github. Also, includes a beginners guide to contributing to project already on Github.
