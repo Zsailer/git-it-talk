@@ -61,6 +61,19 @@ Introduction slides
 <h5>Zach Sailer</h5>
 </section>
 
+<section >
+<h2 style="color:black;">About me</h2>
+
+<img data-src="presentation-data/img/harms-lab-photo.png" style="height:250px;">
+<div>
+<img data-src="presentation-data/img/calpoly.png" style="width:250px">
+</div>
+<div>
+<img data-src="presentation-data/img/jupyter-logo.png" style="width:250px; padding-right:50px;">
+<img data-src="presentation-data/img/harmslab.png" style="width:250px">
+</div>
+</section>
+
 
 <section data-background-image="presentation-data/img/generic-background.jpg">
 <h1>What is our goal today?</h1>
@@ -70,18 +83,18 @@ Introduction slides
 
 
 <section data-background-image="presentation-data/img/generic-background.jpg">
-<h1>How do we learn to code?</h1>
-<h3 class="fragment" style="color:green;">by writing bad code...</h3>
-<h3 class="fragment" style="color:green;">having it fail us...</h3>
-<h3 class="fragment" style="color:green;">headache...</h3>
-<h3 class="fragment" style="color:green;">learn and improve...</h3>
+<h2>Bioinformatics in the wild . . .</h2>
+<h3 class="fragment" style="color:green;">write bad code/analysis,</h3>
+<h3 class="fragment" style="color:green;">have it fail you,</h3>
+<h3 class="fragment" style="color:green;">headache,</h3>
+<h3 class="fragment" style="color:green;">learn and improve.</h3>
 </section>
 
 <section data-background-image="presentation-data/img/generic-background.jpg">
-<h1>How do we learn to code?</h1>
-<h3 class="fragment" style="color:green;">working with others...</h3>
-<h3 class="fragment" style="color:green;">see from their ideas and mistakes...</h3>
-<h3 class="fragment" style="color:green;">learning and improve...</h3>
+<h2>Bioinformatics in the wild . . . (2)</h2>
+<h3 class="fragment" style="color:green;">work with a team,</h3>
+<h3 class="fragment" style="color:green;">see other's ideas and mistakes,</h3>
+<h3 class="fragment" style="color:green;">learn and improve.</h3>
 </section>
 
 
@@ -99,7 +112,8 @@ Version Control
 -->
 
 <section data-background-image="presentation-data/img/generic-background.jpg">
-<h1>What is version control?<h1>
+<h1>What is version control?</h1>
+<p class="fragment"> a system that records changes to a file or set of files over time so that you can recall specific versions later</p>
 </section>
 
 
@@ -109,13 +123,19 @@ Slides about Git
 ######################################################
 -->
 <section data-background-image="presentation-data/img/generic-background.jpg">
-<h1>Meet Git</h2>
-<img class="fragment" data-src="presentation-data/img/git-xkcd.png">
+<h1>Meet <a href="https://git-scm.com/">Git</a></h1>
+<img data-src="presentation-data/img/git-front.png">
 </section>
 
 
 <section data-background-image="presentation-data/img/generic-background.jpg">
-<h1>Git Vocabulary</h2>
+<h2>A relevant XKCD comic</h2>
+<img data-src="presentation-data/img/git-xkcd.png">
+</section>
+
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Git Vocabulary</h2>
 <ul>
 <li class="fragment"><h4>Repository</h4>a project folder tracked by git.</li>
 <li class="fragment"><h4>Branch</h4>a separate line of the repository with own tracking/history.</li>
@@ -126,14 +146,14 @@ Slides about Git
 
 
 <section data-background-image="presentation-data/img/generic-background.jpg">
-<h1>Example of Repository</h1>
+<h2>Example of Repository</h2>
 <p>Think of this as a folder in your filesystem</p>
-<img style="height:300px;" data-src="presentation-data/img/green-step.png">
+<img style="height:200px;" data-src="presentation-data/img/green-step.png">
 </section>
 
 
 <section data-background-image="presentation-data/img/generic-background.jpg">
-<h2>Example of Repository</h2>
+<h2>Example of Repository (2)</h2>
 <h3>Initialize the repo</h3>
 <div class="fragment">
 <pre><code class="bash" data-trim data-noescape>
@@ -152,7 +172,7 @@ user@machine:myproject$ ls -a
 </section>
 
 <section data-background-image="presentation-data/img/generic-background.jpg">
-<h2>Example of Repository</h2>
+<h2>Example of Repository (3)</h2>
 <h3>Add a file to your repo</h3>
 <div class="fragment">
 <pre><code class="bash" data-trim data-noescape>
@@ -174,7 +194,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 </section>
 
 <section data-background-image="presentation-data/img/generic-background.jpg">
-<h2>Example of Repository</h2>
+<h2>Example of Repository (4)</h2>
 <h3>Add a file to your repo</h3>
 <div class="fragment">
 <pre><code class="bash" data-trim data-noescape>
@@ -196,13 +216,13 @@ user@machine:myproject$ git status
 </section>
 
 <section data-background-image="presentation-data/img/generic-background.jpg">
-<h1>Example of Commit</h1>
+<h2>Example of Commit</h2>
 <h3>Changes that are tracked.</h3>
-<img style="height:300px;" data-src="presentation-data/img/yellow-step.png">
+<img style="height:200px;" data-src="presentation-data/img/yellow-step.png">
 </section>
 
 <section data-background-image="presentation-data/img/generic-background.jpg">
-<h2>Example of Commit</h2>
+<h2>Example of Commit (2)</h2>
 <div class="fragment">
 <pre><code class="bash" data-trim data-noescape>
 user@machine:myproject$ git commit
@@ -230,7 +250,7 @@ user@machine:myproject$ git commit
 <section data-background-image="presentation-data/img/generic-background.jpg">
 <h2>Boom! Achievement unlocked!</h2>
 <h3>Local git repository</h3>
-<img style="height:300px;" data-src="presentation-data/img/red-step.png">
+<img style="height:200px;" data-src="presentation-data/img/red-step.png">
 <div class="fragment">
 <pre><code class="git" data-trim data-noescape>
 user@machine:myproject$ git log
@@ -251,13 +271,13 @@ Date:   Thu Jul 7 10:41:05 2016 -0700
 </section>
 
 <section data-background-image="presentation-data/img/generic-background.jpg">
-<h1>Example of Branch</h1>
+<h2>Example of Branch</h2>
 <h3>Work on a new feature using a separate line of development</h3>
 <img class="fragment" style="height:300px;" data-src="presentation-data/img/branch.png">
 </section>
 
 <section data-background-image="presentation-data/img/generic-background.jpg">
-<h1>Example of Branch</h1>
+<h2>Example of Branch (2)</h2>
 <p class="fragment">List current branches.</p>
 <div class="fragment">
 <pre><code class="git" data-trim data-noescape>
@@ -306,7 +326,7 @@ Switched to branch 'feature'
 
 
 <section data-background-image="presentation-data/img/generic-background.jpg">
-<h1>Example of a Merge</h1>
+<h2>Example of a Merge</h2>
 <h3>Merge two lines of development</h3>
 <img class="fragment" style="height:300px;" data-src="presentation-data/img/merge.png">
 </section>
@@ -341,11 +361,11 @@ Remote repositories
 -->
 
 <section data-background-image="presentation-data/img/generic-background.jpg">
-<h1>from local repo to a remote repo</h1>
+<h1>Make your project public.</h1>
 </section>
 
 <section data-background-image="presentation-data/img/generic-background.jpg">
-<h1>Remote Repository</h1>
+<h2>Remote Repository</h2>
 <ul>
 	<li class="fragment">A mirror of a local repository hosted on a remote server</li>
 	<li class="fragment">Allows for many developers working on one repository.</li>
@@ -434,8 +454,9 @@ To git@github.com:Zsailer/myproject.git
 </code></pre>
 </section>
 
-<section data-background-image="presentation-data/img/generic-background.jpg">
-<h3>Create a new repository (3)</h3>
+<section data-background-image="presentation-data/img/github-background.jpg">
+<h3>Congratulations!</h3>
+<p>You now have a project on Github!</p>
 <img data-src="presentation-data/img/github-remote-repo.png">
 </section>
 
@@ -446,26 +467,155 @@ Collaborating Example
 -->
 
 
-
-<section data-background-image="presentation-data/img/generic-background.jpg">
-<h2>Github vocabulary</h2>
-<ul>
-<li class="fragment"><h4>Fork:</h4> start a new line of development from a remote repo (like branching).</li>
-<li class="fragment"><h4>Pull-Request</h4> merge a forked repo into another remote repo (like merging.)</li>
-</ul>
+<section data-background-image="presentation-data/img/github-background.jpg">
+<h1>Now, for the good stuff!</h1>
+<p>Finally, we're ready to learn how to</p>
+<h3>collaborate on (or contribute to) a single project</h3>
 </section>
 
 
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h1>Some more vocabulary...</h1>
+<div class="fragment">
+<img align="left" style="height:80px; margin:0px; padding-right:10px;"  data-src="presentation-data/img/branch.png">
+<h2 align="left">Fork :</h2>
+<p align="left">start a new line of development from a remote repo (like branching).</p>
+</div>
+<div class="fragment">
+<img align="left" style="height:80px; margin:0px; padding-right:10px;"  data-src="presentation-data/img/merge.png">
+<h2 align="left">Pull-Request</h2>
+<p align="left">merge a forked repo into another remote repo (like merging.)</p>
+</div>
+</section>
+
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h1>Let's begin</h1>
+</section>
+
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Fork a project on Github</h2>
+<p>Go to <a href="https://github.com/Zsailer/hello-from-uo-bioinfo">github.com/Zsailer/hello-from-uo-bioinfo</a></p>
+<p>and click fork.</p>
+<img data-src="presentation-data/img/fork.png">
+</section>
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Clone the fork locally.</h2>
+<pre class="fragment"><code>user@machine:$ git clone https://github.com/username/hello-from-uo-bioinfo
+
+Cloning into 'hello-from-uo-bioinfo'...
+remote: Counting objects: 19, done.
+remote: Compressing objects: 100% (16/16), done.
+remote: Total 19 (delta 6), reused 9 (delta 1), pack-reused 0
+Unpacking objects: 100% (19/19), done.
+Checking connectivity... done.
+</code></pre>
+<p class="fragment">Add a link to the remote repo as well (named it "upstream")</p>
+<pre class="fragment"><code>user@machine:$ git remote add upstream https://github.com/Zsailer/hello-from-uo-bioinfo
+</code></pre>
+</section>
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Branch, add file, and commit.</h2>
+<ol>
+<li>Name your branch "addme" and switch to it.</li>
+<li>Add a file named "hello_{github username}.py" (i.e. hello_zsailer.py).</li>
+<li>Commit this change.</li>
+</ol>
+</section>
+
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Push local branch to Github.</h2>
+<pre class="fragment"><code>user@machine:$ git push origin addme
+
+Counting objects: 2, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 228 bytes | 0 bytes/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+</code></pre>
+</section>
+
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Submit a pull request</h2>
+<p>Go to your fork on Github and click pull request.</p>
+<img data-src="presentation-data/img/pullrequest.png">
+</section>
+
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Submit a pull request (2)</h2>
+<p>add a description and create pull request</p>
+<img data-src="presentation-data/img/pull-request-2.png">
+</section>
+
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Merged!</h2>
+<img data-src="presentation-data/img/merged.png">
+</section>
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h3>Pull changes and update remote branches.</h3>
+<div class="fragment">
+<p>Pull from upstream</p>
+<pre><code>user@machine:$ git pull upstream master
+</code></pre>
+</div>
+<div class="fragment">
+<p>and push the updates to all branches.</p>
+<pre ><code>user@machine:$ git push --all origin
+</code></pre>
+</div>
+</section>
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Congrats! You've contributed!</h2>
+</section>
 <!--
 ######################################################
-Useful Resources
+Handling conflicts
 ######################################################
 -->
 
 <section data-background-image="presentation-data/img/generic-background.jpg">
-<h2>Git vocabulary (3)</h2>
+<h1>Why not Dropbox?</h1>
+<p class="fragment" style="color:red;">Merge conflicts!</p>
 </section>
 
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Handling conflict</h2>
+<h2>Rebase your branch.</h2>
+<h2>Push the updated branch</h2>
+</section>
+
+<!--
+######################################################
+Closing comments and useful Resources
+######################################################
+-->
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Thanks!</h2>
+<div style="margin-left:33%;">
+<img align="left" style="height:80px; margin:0px; padding-right:10px;"  data-src="presentation-data/img/github-logo.png">
+<h2 align="left"><a href="https://github.com/Zsailer" align="left">Zsailer</a></h2>
+<img align="left" style="height:65px; margin:0px; padding-right:5px;"  data-src="presentation-data/img/twitter-log.png">
+<h2 align="left"><a href="" align="left">@zrsailer</a></h2>
+</div>
+</section>
+
+<section data-background-image="presentation-data/img/generic-background.jpg">
+<h2>Resources</h2>
+<ul>
+<li><a href="https://www.atlassian.com/git/tutorials/">Atlassian</a> has some useful tutorials.</li>
+<li><a href="https://help.github.com/articles/good-resources-for-learning-git-and-github/">Github</a> also has a list of helpful tools.</li>
+<li></li>
+</ul>
+</section>
 <!--
 ######################################################
 END
