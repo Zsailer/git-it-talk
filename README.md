@@ -1,6 +1,6 @@
 # Collaborating on Code Talk
 
-A primer for learning Git and Github. The slides can be viewed [here](https://zsailer.github.io/git-it-talk/).
+A primer for learning Git and Github. The slides (via Reveal.js) can be viewed [here](https://zsailer.github.io/git-it-talk/).
 
 The purpose of this talk is provide UO bioinformatic students with a simple
 beginner's demo to Git and Github. The talk includes how to start
